@@ -1,0 +1,31 @@
+{{>header}}
+{{>nav}}
+
+
+<section class="container my-3">
+        <h3>Edit User</h3>
+        <form id="myForm" class="my-4" action="/editLogic/{{task._id}}">
+            <div class="mb-3">
+                <label for="title">Title</label>
+                <input id="title"  name="title" type="text" class="form-control" value="{{task.title}}">
+            </div>
+            <div class="mb-3">
+                <label for="content">Content</label>
+                <input id="content" name="content"  class="form-control" value="{{task.content}}" >
+            </div>
+            <div class="mb-3">
+                <label for="date">Date</label>
+                <input id="date" name="date" type="text" class="form-control" placeholder="6/4/2023" value="{{task.date}}">
+            </div>
+            
+            <div class="mb-3">
+                {{!-- <!-- <label for="status">Status</label> --> --}}
+                <select name="status" id="status" class="form-control" >
+                    <option value="false">False</option>
+                    <option value="true">True</option>
+                </select>
+            </div>
+            <button class="btn btn-primary">Update</button>
+        </form>
+
+{{>footer}}
